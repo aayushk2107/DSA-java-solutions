@@ -18,4 +18,4 @@ Discarding negative prefixes: the algorithm “throws away” previous sums that
 
 Contiguous subarray: Kadane works on consecutive elements
 
-O(n) linear scan: no nested loops, just one pass
+O(n) linear scan: no nested loops, just one pass*/
