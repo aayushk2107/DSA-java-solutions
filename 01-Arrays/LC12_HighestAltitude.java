@@ -1,5 +1,4 @@
-/*Kadane Signature--At each step, decide:
-do I extend what I have, or restart here
+/*
 gain = [-5,1,5,0,-7];
 Move step by step:
 
