@@ -8,4 +8,7 @@
 3. Stucking and applying another methods to my questions in my second visit tells me 
  that i need to create an example on my own to properly understand the question and
  commit a blunder like applyig another methods damn it
+ 
+4. Didn't wrote pseudo code in english language on paper before coding why to do cause
+ to enforce structural learning"
 */
