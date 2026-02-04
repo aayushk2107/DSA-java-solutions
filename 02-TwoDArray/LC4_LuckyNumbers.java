@@ -13,6 +13,7 @@ Explanation: 15 is the only lucky number since it is the minimum in its row and 
 
 
 ****PRECIOUS UNDERSTANDINGS I GOT FROM THIS QUESTION THE ENTIRE LOGIC I FOUND BY MYSELF BUT GOT TRIPPED OVER A TINY PART****
+
 In 2D problems, if a value matters later, store its index immediately.
 Value without position is useless.
 
