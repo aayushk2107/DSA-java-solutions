@@ -20,7 +20,7 @@ class Solution {
     public int[] searchRange(int[] nums, int target) {
         int n=nums.length;
         int left=-1,right=-1;
-        //Find left boundary
+        //left boundary search
         int l=0,r=n-1;
         while(l<=r){
             int m=(l+r)/2;
@@ -34,7 +34,7 @@ class Solution {
                 left=m;
             }
         }
-        //find right boundary
+        //right boundary search
         l=0;r=n-1;
         while(l<=r){
             int m=(l+r)/2;
