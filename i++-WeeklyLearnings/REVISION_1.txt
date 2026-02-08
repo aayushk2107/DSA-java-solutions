@@ -1,0 +1,10 @@
+WEEKLY_!REVISION_1;
+
+ Revised two questions 
+ 1st - Find the first and last position of leetcode
+ PROBLEM I GET- Still not get comfortable with invariant thinking 
+
+ 2nd - Lucky numbers 
+ PROBLEM I GET- Got confused in global and local variables like assigned the minimum 
+                element in the row outside the for loop that caused a problem why so 
+                cause it will gets updated at every iteration of I.
