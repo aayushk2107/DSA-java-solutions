@@ -1,5 +1,4 @@
 //floor problem of BS floor is something which is the smallest number which is equal to or lesser than the target
-import java.util.Arrays;
 public class Main{
     public static void main(String[]args){
         int []arr={1,2,3,4,8,15,18,19,22,24,27};
