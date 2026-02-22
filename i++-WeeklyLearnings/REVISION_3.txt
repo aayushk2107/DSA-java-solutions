@@ -1,0 +1,2 @@
+// tried solving leetcode binary search question and not 
+able to make a great leap over boundary questions
