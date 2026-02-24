@@ -10,7 +10,9 @@ public class Main{
         for(int i=0;i<3;i++){
             ans[i]=nums[i];
         }
-        for(int i=3;i<6;i++){
+        //Leart or recalled onr most important thing whcih is like in what array we have to modify we put
+        //exactly only that array length in the loop definition
+        for(int i=3;i<ans.length;i++){
             ans[i]=nums[i-3];
         }
         return ans;
