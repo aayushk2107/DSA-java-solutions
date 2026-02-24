@@ -1,2 +1,5 @@
 // tried solving leetcode binary search question and not 
 able to make a great leap over boundary questions
+
+Revised a bit and knew that like why less than and greater than gets used in find first and last element
+in the array
