@@ -23,3 +23,29 @@ public class Main{
         return start;
     }
 }
+
+//Editing cause attempted kadane on a self generaed array and got a little tweaky answer on 28/02/2026
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={10,20,15,16,17,22};
+        int ans=kadane(arr);
+        System.out.println(ans);
+    }
+    static int kadane(int []nums){
+        int currentsum=nums[0];
+        int maxsum=nums[0];
+        for(int i=1;i<nums.length;i++){
+            if(currentsum+nums[i]>nums[i]){
+                currentsum=currentsum+nums[i];
+            }
+            else{
+                currentsum=nums[i];
+            }
+            if(currentsum>maxsum){
+                maxsum=currentsum;
+            }
+        }
+        return maxsum;
+    }
+}
