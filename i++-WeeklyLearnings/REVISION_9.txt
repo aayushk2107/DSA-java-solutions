@@ -2,3 +2,4 @@ On 2 march 2026 revised two sum
 On 3rd march 2026 revised two sum 2 got one problem which is print exactly without any special treatment 
 and then watched a reference value lol
 Tried solving shuffling the arrays questiona and got shuffleed into finding thepattern i founded myself once on 7th march
+on 8th march i revised binary search
