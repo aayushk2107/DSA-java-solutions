@@ -1,18 +1,21 @@
-//revised Running sum
-public class Main{
-    public static void main(String[]args){
-        int []arr={1,2,3,4,5};
-        int ans=runningSum(arr);
-        System.out.println(ans);
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        int []arr={1,2,3,4,5,6,7,8,9,10};
+        int []ans=magic(arr);
+        System.out.println(Arrays.toString(ans));
     }
-    static int runningSum(int[]nums){
-        if(nums.length==0){
-            return -1;
+    static int[] magic(int []nums){
+        int []ans=new int[nums.length];
+        for(int i=0;i<ans.length;i++){
+            nums[i]=nums[i]+1;
+            if(nums[i]%2==0){
+                ans[i]=0;
+            }
+            else{
+                ans[i]=nums[i];
+            }
         }
-        int sum=0;
-        for(int i=0;i<nums.length;i++){
-            sum=sum+nums[i];
-        }
-        return sum;
+        return ans;
     }
 }
