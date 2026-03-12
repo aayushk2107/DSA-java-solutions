@@ -1,21 +1,21 @@
 import java.util.Arrays;
-class Main {
+public class Main {
     public static void main(String[] args) {
-        int []arr={1,2,3,4,5,6,7,8,9,10};
-        int []ans=magic(arr);
-        System.out.println(Arrays.toString(ans));
+        int []arr={1,2,3,4,5,6,7};
+        int ans=magic23(arr);
+        System.out.println(ans);
     }
-    static int[] magic(int []nums){
-        int []ans=new int[nums.length];
-        for(int i=0;i<ans.length;i++){
-            nums[i]=nums[i]+1;
-            if(nums[i]%2==0){
-                ans[i]=0;
-            }
-            else{
-                ans[i]=nums[i];
+    static int magic23(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]%nums[i]== 0 && nums[i]%1==0){
+                nums[i]=0;
+                sum++;
             }
         }
-        return ans;
+        return sum;
     }
 }
