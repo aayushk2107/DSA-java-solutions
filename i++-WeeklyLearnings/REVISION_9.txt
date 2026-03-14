@@ -4,3 +4,16 @@ and then watched a reference value lol
 Tried solving shuffling the arrays questiona and got shuffleed into finding thepattern i founded myself once on 7th march
 on 8th march i revised binary search
 on 13th march tried to solve multiplication table
+on 14th march carried forward the multiplication table like this 
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,5};
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            sum=sum+arr[i];
+        }
+        for(int i=1;i<11;i++){
+            System.out.println(sum+"X"+i+"="+sum*i);
+        }
+    }
+}
