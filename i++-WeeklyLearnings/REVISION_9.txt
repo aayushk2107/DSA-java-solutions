@@ -17,3 +17,4 @@ public class Main{
         }
     }
 }
+on 15th march solved a simple that if array length is divisible by 2 then return true otherwise false
