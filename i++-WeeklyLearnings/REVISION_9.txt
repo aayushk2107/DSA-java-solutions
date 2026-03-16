@@ -18,3 +18,40 @@ public class Main{
     }
 }
 on 15th march solved a simple that if array length is divisible by 2 then return true otherwise false
+on 16th march does flipping an image 
+import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int [][]arr={
+            {1,0,0},
+            {0,1,0},
+            {1,1,1}
+        };
+        int [][]ans=flipping(arr);
+        System.out.println(Arrays.deepToString(ans));
+    }
+    static int[][] flipping(int [][]nums){
+        for(int i=0;i<nums.length;i++){
+            int start=0;
+            int end=nums.length-1;
+            while(start<end){
+                int temp=nums[i][start];
+                nums[i][start]=nums[i][end];
+                nums[i][end]=temp;
+                start++;
+                end--;
+            }
+        }
+        for(int i=0;i<nums.length;i++){
+            for(int j=0;j<nums[i].length;j++){
+                if(nums[i][j]==0){
+                    nums[i][j]=1;
+                }
+                else{
+                    nums[i][j]=0;
+                }
+            }
+        }
+        return nums;
+    }
+}
