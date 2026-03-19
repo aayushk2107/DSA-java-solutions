@@ -56,3 +56,27 @@ public class Main{
     }
 }
 on 18th march starting revision with binary search again
+
+on 19th marcch i solved this
+import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int []arr={2,2,3,4};
+        int []ans=magic44(arr);
+        System.out.println(Arrays.toString(ans));
+    }
+    static int[] magic44(int []nums){
+        if(nums.length==0){
+            return new int[]{-1};
+        }
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]/2==0){
+                nums[i]=1;
+            }
+            else{
+                nums[i]=0;
+            }
+        }
+        return nums;
+    }
+}
