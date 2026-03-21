@@ -108,3 +108,29 @@ public class Main{
         return -1;
     }
 }
+on 21st march revised thsi question 
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,19,26,3};
+        int ans=even(arr);
+        System.out.println(ans);
+    }
+    static int even(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int evencount=0;
+        for(int i=0;i<nums.length;i++){
+            int digitcount=0;
+            int element=nums[i];
+            while(element>0){
+                element=element/10;
+                digitcount++;
+            }
+            if(digitcount%2==0){
+                evencount++;
+            }
+        }
+        return evencount;
+    }
+}
