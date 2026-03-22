@@ -134,3 +134,48 @@ public class Main{
         return evencount;
     }
 }
+on 22nd march
+import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,3,3,3,4,5};
+        int []ans=magic(arr,3);
+        System.out.println(Arrays.toString(ans));
+    }
+    static int[] magic(int []nums,int target){
+        if(nums.length==0){
+            return new int[]{-1,-1};
+        }
+        int n=nums.length;
+        int left=-1,right=-1;
+        //Find left boundary
+        int l=0,r=n-1;
+        while(l<=r){
+            int m=(l+r)/2;
+            if(nums[m]>=target){
+                r=m-1;
+            }
+            else{
+                l=m+1;
+            }
+            if(nums[m]==target){
+                left=m;
+            }
+        }
+        //find right boundary
+        l=0;r=n-1;
+        while(l<=r){
+            int m=(l+r)/2;
+            if(nums[m]<=target){
+                l=m+1;
+            }
+            else{
+                r=m-1;
+            }
+            if(nums[m]==target){
+                right=m;
+            }
+        }
+        return new int[]{left,right};
+    }
+}
