@@ -206,3 +206,31 @@ public class Main{
         return nums;
     }
 }
+on 24th march i solved again
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int []arr={1,2,4,6,7,8,9};
+        int ans=bS(arr,4);
+        System.out.println(ans);
+    }
+    static int bS(int []nums,int target){
+        int start=0;
+        int end=nums.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]<target){
+                start=mid+1;
+            }
+            else if(nums[mid]>target){
+                end=mid-1;
+            }
+            else{
+                return mid;
+            }
+        }
+        return -1;
+    }
+}
