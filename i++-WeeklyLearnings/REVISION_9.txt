@@ -234,3 +234,37 @@ class Main {
         return -1;
     }
 }
+on 26th march i did this
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int n=nums.length;
+        int left=-1,right=-1;
+        int l=0,r=n-1;
+        while(l<=r){
+            int m=(l+r)/2;
+            if(nums[m]>=target){
+                r=m-1;
+            }
+            else{
+                l=m+1;
+            }
+            if(nums[m]==target){
+                left=m;
+            }
+        }
+        l=0;r=n-1;
+        while(l<=r){
+            int m=(l+r)/2;
+            if(nums[m]<=target){
+                l=m+1;
+            }
+            else{
+                r=m-1;
+            }
+            if(nums[m]==target){
+                right=m;
+            }
+        }
+        return new int[]{left,right};
+    }
+}
