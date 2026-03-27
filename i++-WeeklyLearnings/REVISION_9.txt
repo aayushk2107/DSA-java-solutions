@@ -268,3 +268,24 @@ class Solution {
         return new int[]{left,right};
     }
 }
+on 27th march
+class Solution {
+    public char nextGreatestLetter(char[] letters, char target) {
+     int start=0;
+     int end=letters.length-1;
+     char candidate=letters[0];
+     while(start<=end){
+        int mid=start+(end-start)/2;
+        if(letters[mid]>target){
+            candidate=letters[mid];
+            end=mid-1;
+        }
+        else{
+            start=mid+1;
+        }
+      }
+      return candidate;
+    }
+}
+
+
