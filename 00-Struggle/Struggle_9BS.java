@@ -9,3 +9,20 @@ Now in my words
 
 found out one cool analogy from binary search even 
  
+tried solving bs peak element II on 1st april and got problem there 
+  class Solution {
+    public int[] findPeakGrid(int[][] mat) {
+        for(i=0;i<mat.length;i++){
+            int start=0;
+            int end=mat[i].length-1;
+                int mid=start+(end-start)/2;
+                if(mat[i][mid]<mat[i][mid+1]){
+                    start=mid+1;
+                }
+                else{
+                    end=mid;
+                }
+            }
+        }
+    }
+}
