@@ -26,3 +26,38 @@ tried solving bs peak element II on 1st april and got problem there
         }
     }
 }
+on 2 april i did this again 
+tried doing dry run of half code 
+  /*
+THERE ARE TWO WAYS TO START SEARCHING
+1ST- COLUMNS 
+2ND- ROWS
+IF YOU CHOOSE COLUMNS 
+SEARCH DIMENTION = COLUMNS (LEFT/RIGHT)
+SO: 
+BINARY SEARCH MOVEMENT= LEFT/RIGHT
+*/
+/*
+Binary search = columns(log m)
+
+Linear Scan = rows(n)
+
+*/
+
+class Solution {
+    public int[] findPeakGrid(int[][] mat) {
+        int r=mat.length;
+        int c=mat[0].length;
+
+        int start=0;
+        int end=m-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            int maxrow=0;
+            for(int i=1;i<r;i++){
+                if(mat[i][maxrow]>mat[i][maxrow+1])
+            }
+        }
+
+    }
+}
