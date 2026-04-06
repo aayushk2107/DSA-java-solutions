@@ -1,4 +1,4 @@
-/* AMAZON question of finding the element in infinite sorted array*/
+/* AMAZON question of finding the element in infinite sorted array in non decreasing order*/
 
 
 public class Main{
