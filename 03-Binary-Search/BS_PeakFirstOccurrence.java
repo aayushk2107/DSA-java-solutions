@@ -37,12 +37,7 @@ public class PeakFirstOccurrence {
                 start = mid + 1;
             }
         }
-
-        if (start < nums.length && nums[start] == target) {
-            return start;
-        }
-
-        return -1;
+        return start;
     }
 
 
