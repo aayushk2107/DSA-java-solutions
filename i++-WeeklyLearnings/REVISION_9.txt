@@ -366,3 +366,31 @@ public class Main{
     }
 }
 
+on 19th april i revised again minimum in rotated sorted array question and i learned that binary search invariant is always similar which is just make sure 
+the thing which you are finding must be inside the start and end always like always and you should go there by eliminating half the choices confidently yeah that's it dude and there's lot i have to do i am literally building but still not logarithmically 
+
+import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int []arr={4,4,5,5,6,3,3,3,3};
+        int []ans=minInRotatedSorted(arr);
+        System.out.println(Arrays.toString(ans));
+    }
+    static int[] minInRotatedSorted(int []nums){
+        int start=0;
+        int end=nums.length-1;
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]==nums[end]){
+                end--;
+            }
+            else if(nums[mid]<nums[end]){
+                end=mid;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return new int[]{start,nums[start]};
+    }
+}
