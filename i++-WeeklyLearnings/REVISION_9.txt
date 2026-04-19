@@ -366,8 +366,12 @@ public class Main{
     }
 }
 
-on 19th april i revised again minimum in rotated sorted array question and i learned that binary search invariant is always similar which is just make sure 
-the thing which you are finding must be inside the start and end always like always and you should go there by eliminating half the choices confidently yeah that's it dude and there's lot i have to do i am literally building but still not logarithmically 
+on 19th april i revised again minimum in rotated sorted array question and i learned 
+that binary search invariant is always similar which is just make sure 
+the thing which you are finding must be inside the start and end always
+ like always and you should go there by eliminating half the choices confidently 
+yeah that's it dude and there's lot i have to do i am literally building but still not logarithmically 
+
 
 import java.util.Arrays;
 public class Main{
