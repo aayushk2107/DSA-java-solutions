@@ -398,3 +398,29 @@ public class Main{
         return new int[]{start,nums[start]};
     }
 }
+on 20th april i did this thing 
+
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,1,2,3,3};
+        System.out.println(ans(arr));
+    }
+    static int ans(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        for(int i=0;i<nums.length;i++){
+            int count=0;
+            int element=nums[i];
+            for(int j=0;j<nums.length;j++){
+                if(nums[j]==element){
+                    count++;
+                }
+            }
+            if(count ==1){
+                return element;
+            }
+        }
+        return -1;
+    }
+}
