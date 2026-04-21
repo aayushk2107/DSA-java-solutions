@@ -424,3 +424,29 @@ public class Main{
         return -1;
     }
 }
+
+on 21st i solved this 
+
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,4,4,5};
+        System.out.println(firstOccurrence(arr,4));
+    }
+    static int firstOccurrence(int []nums,int target){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=nums.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]>=target){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return start;
+    }
+}
