@@ -610,3 +610,27 @@ public class Main{
         return -1;
     }
 }
+
+on 27th april i did this
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,1,1,2,2,3,3,4,5,6};
+        System.out.println(freq(arr));
+    }
+    static int freq(int []nums){
+        int answer=0;
+        for(int i=0;i<nums.length;i++){
+            int count=0;
+            int element=nums[i];
+            for(int j=0;j<nums.length;j++){
+                if(nums[j]==element){
+                    count++;
+                }
+            }
+            if(count==1){
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
