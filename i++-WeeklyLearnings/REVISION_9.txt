@@ -694,3 +694,33 @@ public class Main{
         return nums[start];
     }
 }
+
+on 30th april i solved this
+public class Main{
+    public static void main(String[]args){
+        int [][]arr={
+            {1,2,3},
+            {4,5,6},
+            {8,7}
+        };
+        System.out.println(peakElementII(arr));
+    }
+    static int peakElementII(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int r=nums.length;
+        int c=nums[0].length;
+        int start=0;
+        int end=c-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            int maxrow=0;
+            for(int i=1;i<r;i++){
+                if(nums[i][mid]>nums[maxrow][mid]){
+                    maxrow=i;
+                }
+            }
+        }
+    }
+}
