@@ -7,6 +7,36 @@ Given the array nums after the possible rotation and an integer target, return t
 
 You must write an algorithm with O(log n) runtime complexity.
 
+Example 1 (critical case)
+Plain text
+[5, 1]
+start = 0, mid = 0, end = 1
+nums[start] = 5, nums[mid] = 5
+Now check:
+nums[start] < nums[mid] → ❌ false
+nums[start] <= nums[mid] → ✅ true
+But clearly, the “left half” (just one element) is sorted.
+👉 If you use <, you incorrectly say “not sorted”
+👉 If you use <=, you correctly say “sorted”
+Example 2 (single element)
+Plain text
+[3]
+start = mid = end = 0
+< → false
+<= → true
+A single element is always sorted.
+So <= keeps logic consistent.
+
+So because of these 2 cases we do that right? Or not? Dude ?.
+
+You are using it because:
+In binary search on rotated arrays,
+you only reject a half when you have proof it’s broken.
+And the only proof is:
+Plain text
+nums[start] > nums[mid]
+Everything else → treat as sorted.
+
  */
 
  class Solution {
