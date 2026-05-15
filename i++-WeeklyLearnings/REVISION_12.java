@@ -134,3 +134,28 @@ on 14th may i solved this
         return -1;
     }
 }
+on 15th may i solved this
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={5,6,7,4,3,2};
+        System.out.println(peakElement(arr));
+    }
+    static int peakElement(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=nums.length-1;
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]<nums[mid+1]){
+                start=mid+1;
+            }
+            else{
+                end=mid;
+            }
+        }
+        return start;
+    }
+}
