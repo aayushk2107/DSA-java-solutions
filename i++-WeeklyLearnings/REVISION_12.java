@@ -197,3 +197,37 @@ on 16th may i solved this
         return -1;
     }
 }
+
+on 17th may i solved this 
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={3,5,7,9,10,90,100,130,140,160,170};
+        System.out.println(infiniteSortedArray(arr,140));
+    }
+    static int infiniteSortedArray(int []nums,int target){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=1;
+        while(nums[end]<target){
+            int temp=end+1;
+            end=start+(end-start)+1;
+            start=temp;
+        }
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]==target){
+                return nums[mid];
+            }
+            else if(nums[mid]<target){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+        return -1;
+    }
+}
