@@ -231,3 +231,28 @@ on 17th may i solved this
         return -1;
     }
 }
+on 18th may i solved this
+
+    public class Main{
+    public static void  main(String[]args){
+        int []arr={44,66,77,11,22,33};
+        System.out.println(minInRSA(arr));
+    }
+    static int minInRSA(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=nums.length-1;
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]<nums[end]){
+                end=mid;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return nums[start];
+    }
+}
