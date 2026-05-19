@@ -256,3 +256,31 @@ on 18th may i solved this
         return nums[start];
     }
 }
+on 19th may i solved this
+
+    import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int [][]arr={
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+        int [][]ans=reverseArray(arr);
+        System.out.println(Arrays.deepToString(ans));
+    }
+    static int[][] reverseArray(int [][]nums){
+        for(int i=0;i<nums.length;i++){
+            int start=0;
+            int end=nums[i].length-1;
+            while(start<end){
+                int temp=nums[i][start];
+                nums[i][start]=nums[i][end];
+                nums[i][end]=temp;
+                start++;
+                end--;
+            }
+        }
+        return nums;
+    }
+}
