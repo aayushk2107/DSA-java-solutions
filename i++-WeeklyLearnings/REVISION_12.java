@@ -284,3 +284,26 @@ public class Main{
         return nums;
     }
 }
+
+on 20th may i solved this
+
+    import java.util.Arrays;
+public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,5};
+        int []ans=reverse(arr);
+        System.out.println(Arrays.toString(ans));
+    }
+    static int[] reverse(int []nums){
+        int start=0;
+        int end=nums.length-1;
+        while(start<end){
+            int temp=nums[end];
+            nums[end]=nums[start];
+            nums[start]=temp;
+            start++;
+            end--;
+        }
+        return nums;
+    }
+}
