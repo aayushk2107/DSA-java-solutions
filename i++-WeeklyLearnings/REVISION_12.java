@@ -333,3 +333,28 @@ on 21st may i solved this got little problems
         return start;
     }
 }
+on 22nd may i did this
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,5,56,71};
+        System.out.println(numbersCounting(arr));
+    }
+    static int numbersCounting(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int evencount=0;
+        for(int i=0;i<nums.length;i++){
+            int digitcount=0;
+            while(nums[i]>0){
+                nums[i]=nums[i]/10;
+                digitcount++;
+            }
+            if(digitcount%2==0){
+                evencount++;
+            }
+        }
+        return evencount;
+    }
+}
