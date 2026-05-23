@@ -358,3 +358,24 @@ on 22nd may i did this
         return evencount;
     }
 }
+
+on 23rd may i did this simple stuff
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3};
+        System.out.println(runningSum(arr));
+    }
+    static int runningSum(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            if(i%2==0){
+                sum=sum+i;
+            }
+        }
+        return sum;
+    }
+}
