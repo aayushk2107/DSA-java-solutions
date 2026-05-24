@@ -379,3 +379,32 @@ on 23rd may i did this simple stuff
         return sum;
     }
 }
+
+on 24th may i did this 
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={9,8,7,6,5};
+        System.out.println(bSReverse(arr,5));
+    }
+    static int bSReverse(int []nums,int target){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=nums.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]==target){
+                return mid;
+            }
+            else if(nums[mid]<target){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return -1;
+    }
+}
