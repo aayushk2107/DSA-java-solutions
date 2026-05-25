@@ -408,3 +408,19 @@ on 24th may i did this
         return -1;
     }
 }
+
+on 25th may i did this simple shit
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3};
+        System.out.println(bSOA(arr));
+    }
+    static int bSOA(int []nums){
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            sum=sum+nums[i];
+        }
+        return sum;
+    }
+}
