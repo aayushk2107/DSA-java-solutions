@@ -333,3 +333,133 @@ on 21st may i solved this got little problems
         return start;
     }
 }
+on 22nd may i did this
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,5,56,71};
+        System.out.println(numbersCounting(arr));
+    }
+    static int numbersCounting(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int evencount=0;
+        for(int i=0;i<nums.length;i++){
+            int digitcount=0;
+            while(nums[i]>0){
+                nums[i]=nums[i]/10;
+                digitcount++;
+            }
+            if(digitcount%2==0){
+                evencount++;
+            }
+        }
+        return evencount;
+    }
+}
+
+on 23rd may i did this simple stuff
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3};
+        System.out.println(runningSum(arr));
+    }
+    static int runningSum(int []nums){
+        if(nums.length==0){
+            return -1;
+        }
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            if(i%2==0){
+                sum=sum+i;
+            }
+        }
+        return sum;
+    }
+}
+
+on 24th may i did this 
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={9,8,7,6,5};
+        System.out.println(bSReverse(arr,5));
+    }
+    static int bSReverse(int []nums,int target){
+        if(nums.length==0){
+            return -1;
+        }
+        int start=0;
+        int end=nums.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(nums[mid]==target){
+                return mid;
+            }
+            else if(nums[mid]<target){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return -1;
+    }
+}
+
+on 25th may i did this simple shit
+
+    public class Main{
+    public static void main(String[]args){
+        int []arr={1,2,3};
+        System.out.println(bSOA(arr));
+    }
+    static int bSOA(int []nums){
+        int sum=0;
+        for(int i=0;i<nums.length;i++){
+            sum=sum+nums[i];
+        }
+        return sum;
+    }
+}
+
+on 26th may i did this
+
+public class Main{
+public static void main(String[]args){
+    int []arr={5,6,7,1,2,3,4};
+    System.out.println(rotatedSorted(arr,6));
+}
+static int rotatedSorted(int []nums,int target){
+    if(nums.length==0){
+        return -1;
+    }
+    int start=0;
+    int end=nums.length-1;
+    while(start<=end){
+        int mid=start+(end-start)/2;
+        if(nums[mid]==target){
+            return nums[mid];
+        }
+        else if(nums[mid]>=nums[start]){
+            if(nums[mid]>target && nums[mid]<=nums[start]){
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        else{
+            if(nums[mid]<target && nums[end]>=target){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+    }
+    return -1;
+}
+}
