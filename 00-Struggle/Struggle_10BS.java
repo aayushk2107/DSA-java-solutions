@@ -1,4 +1,4 @@
-[12:11 pm, 27/05/2026] .: class Solution {
+class Solution {
     public int mySqrt(int x) {
         int start=0;
         int end=x;
@@ -15,7 +15,7 @@
         return end;
     }
 }
-[12:20 pm, 27/05/2026] .: class Solution {
+class Solution {
     public int mySqrt(int x) {
         int start=0;
         int end=x;
@@ -31,7 +31,7 @@
         return end;
     }
 }
-[12:23 pm, 27/05/2026] .: class Solution {
+class Solution {
     public int mySqrt(int x) {
         int start=0;
         int end=x;
