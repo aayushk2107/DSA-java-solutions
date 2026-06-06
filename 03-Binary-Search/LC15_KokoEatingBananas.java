@@ -25,28 +25,36 @@ Output: 23
 
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-         int start=1;
-         int end=piles[0];
-         for(int i=1;i<piles.length;i++){
-            if(end<piles[i]){
+        int start=1;
+        int end=piles[0];
+        for(int i=0;i<piles.length;i++){
+            if(piles[i]>end){
                 end=piles[i];
             }
-         }
-         while(start<=end){
+        }
+        while(start<=end){
             int mid=start+(end-start)/2;
-            if(hoursEstimation(piles,h,mid)){
+            if(kSpeed(piles,h,mid)){
                 end=mid-1;
             }
             else{
                 start=mid+1;
             }
-         }
-         return start;
+        }
+        return start;
     }
-    public boolean hoursEstimation(int []piles,int h,int k){
+    public boolean kSpeed(int []nums,int h,int k){
         long hours=0;
-        for(int i=0;i<piles.length;i++){
-            hours=hours+(piles[i]+k-1)/k;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i] % k == 0){
+                hours=hours+nums[i]/k;
+            }
+            else if(nums[i]>k){
+                hours=hours+nums[i]/k+1;
+            }
+            else{
+                hours=hours+1;
+            }
         }
         return hours<=h;
     }
