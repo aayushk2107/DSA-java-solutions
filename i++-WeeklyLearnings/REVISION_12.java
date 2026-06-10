@@ -463,3 +463,4 @@ static int rotatedSorted(int []nums,int target){
     return -1;
 }
 }
+on 10th june half understood again and wrote code the median of sorted arrays question
