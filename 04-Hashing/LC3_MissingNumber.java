@@ -34,6 +34,25 @@ Explanation:
 n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 */
 
+
+
+
+
+/*
+
+The reason hashing wins is that:
+
+Store once
+Query many times
+
+is usually cheaper than:
+
+Don't store
+Search repeatedly
+
+ */
+
+
 class Solution {
     public int missingNumber(int[] nums) {
         int size=nums.length;
