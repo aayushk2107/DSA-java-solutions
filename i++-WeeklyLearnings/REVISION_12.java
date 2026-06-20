@@ -464,3 +464,5 @@ static int rotatedSorted(int []nums,int target){
 }
 }
 on 10th june half understood again and wrote code the median of sorted arrays question
+
+    on 20th june i revised LEETCODE group anagrams and find lossers with zero and one loses on leetcode itself
