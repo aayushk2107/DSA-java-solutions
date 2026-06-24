@@ -25,3 +25,33 @@ class Solution {
         return maxLength;
     }
 }
+
+
+/* Optimal APPROACH*/
+class Solution {
+    public int findMaxLength(int[] nums) {
+        HashMap<Integer,Integer> map=new HashMap<>();
+        map.put(0,-1);
+        int sum=0;
+        int maxlength=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                nums[i]=-1;
+            }
+            if(nums[i]==1){
+                nums[i]=1;
+            }
+            sum=sum+nums[i];
+            if(map.containsKey(sum)==true){
+                int length=i-map.get(sum);
+                if(maxlength<length){
+                    maxlength=length;
+                }
+            }
+            if(!map.containsKey(sum)){
+                map.put(sum,i);
+            }
+        }
+        return maxlength;
+    }
+}
