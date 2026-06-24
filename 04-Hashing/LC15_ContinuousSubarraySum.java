@@ -1,3 +1,5 @@
+/*Another  ALTERNATIVE APPROACH IS (CURRENTSUM-OLDSUM) % K==0*/
+
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
         HashMap<Integer,Integer>map=new HashMap<>();
