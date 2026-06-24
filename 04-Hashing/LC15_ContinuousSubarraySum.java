@@ -1,4 +1,5 @@
-/*Another  ALTERNATIVE APPROACH IS (CURRENTSUM-OLDSUM) % K==0*/
+/*Another  ALTERNATIVE APPROACH IS (CURRENTSUM-OLDSUM) % K==0
+    WHICH CAN ASLO BE WRITTEN AS SUBARRAYSUM % K ==0 AMD THAT'S WHAT WE JUST DID YEAH*/
 
 class Solution {
     public boolean checkSubarraySum(int[] nums, int k) {
