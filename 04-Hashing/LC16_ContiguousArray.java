@@ -1,3 +1,5 @@
+/*BRUTE FORCE TECHNIQUE*/
+
 class Solution {
     public int findMaxLength(int[] nums) {
         int maxLength=0;
