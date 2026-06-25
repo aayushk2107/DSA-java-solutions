@@ -1,3 +1,8 @@
+/*UNIVERSAL FORMULA SUBARRAY SUM=CURRENT SUM - OLD SUM
+    SO IN THIS QUESTION OLD SUM=CURRENTSUM - SUBARRAY SUM(K)
+    HOW SUBARRAY SUM BECOMES K CAUSE WE ARE FINDING A SUM WHICH IS EQUAL TO K ITSELF*/
+
+
 class Solution {
     public int subarraySum(int[] nums, int k) {
         int validSubarray=0;
