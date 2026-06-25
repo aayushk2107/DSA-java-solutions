@@ -7,6 +7,30 @@ into a SUM?*/
     SS = K
     CS - OS = K
     OS = CS(SUM) - K    */
+/*
+When you see a subarray problem:
+
+1. What property do I care about?
+
+2. Can I encode that property
+   as numbers?
+
+3. Does the subarray sum
+   become the thing I want?
+
+4. If yes:
+
+   SS = Target
+
+   CS - OS = Target
+
+   OS = CS - Target*/
+
+
+
+
+
+
 
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
