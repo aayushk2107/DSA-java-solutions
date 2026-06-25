@@ -26,8 +26,11 @@ When you see a subarray problem:
 
    OS = CS - Target*/
 
-
-
+=======INVARIANT======== 
+    
+The quantity I care about
+must be representable as
+a subarray sum.
 
 
 
