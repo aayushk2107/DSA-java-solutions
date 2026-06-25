@@ -26,7 +26,8 @@ class Solution {
     }
 }
 
-
+HERE WE MANIPULATED THE QUESTION TO BEHAVE LIKE SS= CS - OS BY CONVERTING 0 AS -1 AND 1 AS 1 
+    SO NOW THE SS GIVES VALUE 0 AFTER SUBTRACTION SO THAT CHANGES THE EQUATION TO CS = OS
 /* Optimal APPROACH*/
 class Solution {
     public int findMaxLength(int[] nums) {
