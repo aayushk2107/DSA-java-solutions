@@ -1,3 +1,13 @@
+/*Step 1:
+
+Can I transform the thing I care about
+into a SUM?*/
+
+/*   AGAIN MANIPULATED THE QUESTION INTO A PATTERN WHICH FITS THE SS= CS - OS
+    SS = K
+    CS - OS = K
+    OS = CS(SUM) - K    */
+
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
         HashMap<Integer,Integer> map=new HashMap<>();
