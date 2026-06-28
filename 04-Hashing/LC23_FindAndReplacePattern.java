@@ -13,11 +13,11 @@ class Solution {
         for(int i=0;i<words.length;i++){
             HashMap<Character,Integer> map2=new HashMap<>();
             int number2=1;      
+            if(words[i].length() != pattern.length()){
+                break;
+            }
             for(int j=0;j<words[i].length();j++){
                 String str=words[i];
-                if(words[i].length() != pattern.length()){
-                    break;
-                }
                 int sizz=words[i].length();
                 char ch=str.charAt(j);
                 char ch2=pattern.charAt(j);
