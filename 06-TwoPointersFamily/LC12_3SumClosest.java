@@ -8,26 +8,15 @@ class Solution {
             return sum;
         }
         for(int i=0;i<nums.length-2;i++){
-            if(i>=1){
-                if(nums[i]==nums[i-1]){
-                    continue;
-                }
-            }
             int start=i+1;
             int end=nums.length-1; 
             while(start<end){
                 int currentSum=nums[i]+nums[start]+nums[end];
                 if(currentSum<target){
                     start++;
-                    while(start<end && nums[start]==nums[start-1]){
-                        start++;
-                    }
                 }
                 else if(currentSum>target){
                     end--;
-                    while(start<end && nums[end]==nums[end+1]){
-                        end--;
-                    }
                 }
                 else{
                     return currentSum;
