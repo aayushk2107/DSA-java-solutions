@@ -61,3 +61,32 @@ class Solution {
 
     }
 }
+
+on 10 th july i stuck on thsi question for the k<0 part 
+
+  class Solution {
+    public int[] decrypt(int[] code, int k) {
+        int []arr=new int[code.length];
+        int sum=0;
+        for(int i=0;i<code.length*2;i++){
+            sum=sum+code[i % code.length];
+            if(k>0){
+                if(i==k){
+                    sum=sum-code[i-k];
+                    arr[i-k]=sum;
+                }
+                else if(i>k){
+                    sum=sum-code[i-k];
+                    arr[i-k]=sum;
+                }
+            }
+            else if (k < 0) {
+
+            }
+            else{
+                return arr;
+            }
+        }
+        return new int[]{};
+    }
+}
