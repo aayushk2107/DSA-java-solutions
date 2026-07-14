@@ -1,3 +1,6 @@
+/*THE INVARIANT IS WINDOW MUST CONTAINS ALWAYS ATMOST K ZEROES IF IT EXCEEDS AFTER K NUMBER THEN WE MUST START SHRINKING 
+    IT UNTIL IT BECOMES LESS THAN OR EQUAL TO K*/
+
 class Solution {
     public int longestOnes(int[] nums, int k) {
         int globalLength=0;
