@@ -1,3 +1,7 @@
+BRUTE FORCE
+
+    APPROACH 1:
+    
 class Solution {
     public void sortColors(int[] nums) {
         int zero=0;
@@ -22,6 +26,27 @@ class Solution {
         }
         for(int i=one+zero;i<=zero+one+two-1;i++){
             nums[i]=2;
+        }
+    }
+}
+
+APPROACH 2
+
+    INSERTION SORT
+
+    class Solution {
+    public void sortColors(int[] nums) {
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j>0;j--){
+                if(nums[j-1]>nums[j]){
+                    int temp=nums[j-1];
+                    nums[j-1]=nums[j];
+                    nums[j]=temp;
+                }
+                else{
+                    break;
+                }
+            }
         }
     }
 }
