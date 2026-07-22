@@ -466,3 +466,42 @@ static int rotatedSorted(int []nums,int target){
 on 10th june half understood again and wrote code the median of sorted arrays question
 
     on 20th june i revised LEETCODE group anagrams and find lossers with zero and one loses on leetcode itself
+
+
+    on 22nd july i did this
+    class Solution {
+    public void rotate(int[] nums,int k) {
+        k=k%nums.length;
+        int n=nums.length;
+
+        int start=0;
+        int end=n-k-1;
+        while(start<end){
+            int temp=nums[start];
+            nums[start]=nums[end];
+            nums[end]=temp;
+            start++;
+            end--;
+        }
+
+        int start1=n-k;
+        int end1=n-1;
+        while(start1<end1){
+            int temp=nums[start1];
+            nums[start1]=nums[end1];
+            nums[end1]=temp;
+            start1++;
+            end1--;
+        }
+
+        int start2=0;
+        int end2=n-1;
+        while(start2<end2){
+            int temp=nums[start2];
+            nums[start2]=nums[end2];
+            nums[end2]=temp;
+            start2++;
+            end2--;
+        }
+    }
+}
