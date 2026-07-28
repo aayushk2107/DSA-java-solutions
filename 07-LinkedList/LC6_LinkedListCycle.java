@@ -26,7 +26,9 @@ public class Solution {
 
 OPTIMAL SOLUTION
 
-    FLOYD'S CYCLE DETECTION
+    ALGORITHM USED - FLOYD'S CYCLE DETECTION
+
+    TECHNIQUE USED - FAST AND SLOW APPROACH
 
     /**
  * Definition for singly-linked list.
