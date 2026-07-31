@@ -1,3 +1,4 @@
+APPROACH 1 - CAME UP WITH TWO PASS 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
