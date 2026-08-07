@@ -1,4 +1,4 @@
-on 11th may i did this
+1th may i did this
 
 public class Main{
     public static void main(String[]args){
@@ -505,3 +505,5 @@ on 10th june half understood again and wrote code the median of sorted arrays qu
         }
     }
 }
+on 7th august i revised 
+    remove duplicates from sorted list got one error in edgecases
