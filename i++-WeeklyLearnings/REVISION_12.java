@@ -507,3 +507,31 @@ on 10th june half understood again and wrote code the median of sorted arrays qu
 }
 on 7th august i revised 
     remove duplicates from sorted list got one error in edgecases
+
+
+    on 8th august i did this
+
+    /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        if(head.next == null){
+            return head;
+        }   
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next !=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+}
