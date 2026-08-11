@@ -1,7 +1,4 @@
-on 10th august i did this
 
-    /**
- * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
@@ -25,5 +22,33 @@ class Solution {
         }
         prev.next = slow.next;
         return head;
+    }
+}
+on11thaugustirevisedthis
+
+
+    /**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        ListNode curr = head;
+        HashSet<ListNode> set = new HashSet<>();
+        while(curr != null){
+            if(set.contains(curr)){
+                return curr;
+            }
+            set.add(curr);
+            curr = curr.next;
+        }
+        return null;
     }
 }
