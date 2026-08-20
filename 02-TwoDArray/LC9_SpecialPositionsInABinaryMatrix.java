@@ -9,6 +9,9 @@ class Solution {
                     oneCount++;
                     col = j;
                 }
+                if(oneCount > 1){
+                    break;
+                }
             }
             if(oneCount == 1){
                 int onCount = 0;
