@@ -79,3 +79,27 @@ public class Solution {
         return false;
     }
 }
+/*on 21st i revised this*/
+class Solution {
+    public int[][] matrixReshape(int[][] mat, int r, int c) {
+        int [][] arr = new int[r][c];
+        if (mat.length * mat[0].length != r * c) {
+            return mat;
+        }
+        int rows = 0;
+        int cols = 0;
+        for(int i = 0;i < r; i++){
+            for(int j = 0;j < c; j++){
+                arr[i][j] = mat[rows][cols];
+                if(cols == mat[0].length -1){
+                    rows++;
+                    cols = 0;
+                }
+                else{
+                    cols++;
+                }
+            }
+        }
+        return arr;
+    }
+}
