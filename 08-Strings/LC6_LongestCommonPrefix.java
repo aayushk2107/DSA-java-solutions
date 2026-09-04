@@ -17,8 +17,7 @@ class Solution {
     }
 }
 
-Approach 2
-
+Approach 2 - just an extended version of approach 1
     class Solution {
     public String longestCommonPrefix(String[] strs) {
         String smallest = strs[0];
