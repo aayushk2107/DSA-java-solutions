@@ -40,7 +40,6 @@ Approach 2
                     break;
                 }
                 else if(length1 < currentst.length() && length2 < smallest.length() && currentst.charAt(index) > smallest.charAt(index)){
-                    smallest = smallest;
                     break;
                 }
                 else if(length1 >= currentst.length()){
@@ -70,7 +69,6 @@ Approach 2
                     largest = currentst;
                 }
                 else if(length1 < currentst.length() && length2 < largest.length() && currentst.charAt(index) < largest.charAt(index)){
-                    largest = largest;
                     break;
                 }
                 else if(length1 >= currentst.length()){
