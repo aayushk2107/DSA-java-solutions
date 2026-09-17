@@ -28,16 +28,13 @@ class Solution {
                 end = end1;
                 end -= 1;
                 count += 2;
-                allow = 1;
+                continue;
             }
             else if(s.charAt(start) != s.charAt(end) && count >= 3){
                 return false;
             }
-            if(allow != 1){
-                start++;
-                end--;
-            }
-            allow++;
+            start++;
+            end--;
         }
         return true;
     }
