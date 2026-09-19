@@ -130,3 +130,35 @@ public class Solution {
         return false;
     }
 }
+
+on 19th sep i revised this
+
+    class Solution {
+    public int strStr(String haystack, String needle) {
+        if(haystack.length() < needle.length()){
+            return -1;
+        }
+        int left = 0;
+        for(int i = 0;i < haystack.length();i++){
+            int length = i - left + 1;
+            if(length == needle.length()){
+                int index = 0;
+                int index1 = left;
+                while(index < needle.length()){
+                    if(needle.charAt(index) == haystack.charAt(index1)){
+                        index++;
+                        index1++;
+                    }
+                    else{
+                        left++;
+                        break;
+                    }
+                }
+                if(index == needle.length() && needle.charAt(index - 1) == haystack.charAt(index1 - 1)){
+                    return left;
+                }
+            }
+        }
+        return -1;
+    }
+}
