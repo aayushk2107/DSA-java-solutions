@@ -162,3 +162,15 @@ on 19th sep i revised this
         return -1;
     }
 }
+
+on 27th sep i tryna solve this but got restrictions failed error 
+
+    class Solution {
+    public String multiply(String num1, String num2) {
+        int a = Integer.parseInt(num1);
+        int b = Integer.parseInt(num2);
+        int ans = a * b;
+        String ans1 = Integer.toString(ans);
+        return ans1;
+    }
+}
