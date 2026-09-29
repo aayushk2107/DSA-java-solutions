@@ -180,7 +180,8 @@ on 29th sep i did this
 
     implemented this solution after weeks and did it ine one try 
     did this on a gap of more than 2 months btw it's really easy
-Used an approach to execute everything in the loop itself 
+Used a dummy node approach to execute everything in the loop itself 
+    in the last approach i executed outside the loop even 
     /**
  * Definition for singly-linked list.
  * public class ListNode {
