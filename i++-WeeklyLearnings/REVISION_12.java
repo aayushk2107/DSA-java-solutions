@@ -174,3 +174,47 @@ on 27th sep i tryna solve this but got restrictions failed error
         return ans1;
     }
 }
+
+
+on 29th sep i did this
+
+    /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+        ListNode curr = list1;
+        ListNode curr2 = list2;
+        while(curr != null || curr2 != null){
+            if(curr != null && curr2 != null){
+                if(curr.val < curr2.val){
+                    tail.next = curr;
+                    curr = curr.next;
+                }
+                else{
+                    tail.next = curr2;
+                    curr2 = curr2.next;
+                }
+            }
+            else if(curr == null && curr2 != null){
+                tail.next = curr2;
+                curr2 = curr2.next;
+            }
+            else{
+                tail.next = curr;
+                curr = curr.next;
+            }
+            tail = tail.next;
+        }
+        return dummy.next;
+    }
+}
