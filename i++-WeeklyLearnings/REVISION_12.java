@@ -177,7 +177,7 @@ on 27th sep i tryna solve this but got restrictions failed error
 
 
 on 29th sep i did this
-
+Used an approach to execute everything in the loop itself 
     /**
  * Definition for singly-linked list.
  * public class ListNode {
