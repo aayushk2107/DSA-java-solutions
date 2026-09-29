@@ -179,6 +179,7 @@ on 27th sep i tryna solve this but got restrictions failed error
 on 29th sep i did this
 
     implemented this solution after weeks and did it ine one try 
+    did this on a gap of more than 2 months btw it's really easy
 Used an approach to execute everything in the loop itself 
     /**
  * Definition for singly-linked list.
