@@ -222,3 +222,50 @@ class Solution {
         return dummy.next;
     }
 }
+
+on 1 october i did this 
+    class Solution {
+    public String frequencySort(String s) {
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(int i = 0; i < s.length();i++){
+            char ch = s.charAt(i);
+            map.put(ch,map.getOrDefault(ch , 0) + 1);
+        }
+        ArrayList<Integer> a1 = new ArrayList<>();
+        for(int i = 0;i < 62;i++){
+            char ch = 'a';
+            if(i >= 0 && i < 26){
+                ch = (char)('a' + i);
+            }
+            else if(i >= 26 && i < 52){
+                ch = (char)('A' + (i - 26));
+            }
+            else{
+                ch = (char)('0' + (i - 52));
+            }
+            if(map.containsKey(ch)){
+                a1.add(map.get(ch));
+            }
+        }
+        Collections.sort(a1);
+        StringBuilder ans = new  StringBuilder();
+        for(int i = a1.size() - 1;i >= 0;i--){
+            char ch2 = '/';
+            for(char ch : map.keySet()){
+                int attempts = a1.get(i);
+                if(map.get(ch) == attempts){
+                    ch2 = ch;
+                    while(attempts != 0){
+                        ans.append(ch);
+                        attempts--;
+                    }
+                    break;
+                }
+            }
+            if(ch2 != '/'){
+                map.remove(ch2);
+            }
+        }
+        return new String(ans);
+    }
+}
