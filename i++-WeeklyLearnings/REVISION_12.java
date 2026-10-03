@@ -174,3 +174,98 @@ on 27th sep i tryna solve this but got restrictions failed error
         return ans1;
     }
 }
+
+
+on 29th sep i did this
+
+    implemented this solution after weeks and did it ine one try 
+    did this on a gap of more than 2 months btw it's really easy
+Used a dummy node approach to execute everything in the loop itself 
+    in the last approach i executed outside the loop even 
+    /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+        ListNode curr = list1;
+        ListNode curr2 = list2;
+        while(curr != null || curr2 != null){
+            if(curr != null && curr2 != null){
+                if(curr.val < curr2.val){
+                    tail.next = curr;
+                    curr = curr.next;
+                }
+                else{
+                    tail.next = curr2;
+                    curr2 = curr2.next;
+                }
+            }
+            else if(curr == null && curr2 != null){
+                tail.next = curr2;
+                curr2 = curr2.next;
+            }
+            else{
+                tail.next = curr;
+                curr = curr.next;
+            }
+            tail = tail.next;
+        }
+        return dummy.next;
+    }
+}
+
+on 1 october i did this 
+    class Solution {
+    public String frequencySort(String s) {
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(int i = 0; i < s.length();i++){
+            char ch = s.charAt(i);
+            map.put(ch,map.getOrDefault(ch , 0) + 1);
+        }
+        ArrayList<Integer> a1 = new ArrayList<>();
+        for(int i = 0;i < 62;i++){
+            char ch = 'a';
+            if(i >= 0 && i < 26){
+                ch = (char)('a' + i);
+            }
+            else if(i >= 26 && i < 52){
+                ch = (char)('A' + (i - 26));
+            }
+            else{
+                ch = (char)('0' + (i - 52));
+            }
+            if(map.containsKey(ch)){
+                a1.add(map.get(ch));
+            }
+        }
+        Collections.sort(a1);
+        StringBuilder ans = new  StringBuilder();
+        for(int i = a1.size() - 1;i >= 0;i--){
+            char ch2 = '/';
+            for(char ch : map.keySet()){
+                int attempts = a1.get(i);
+                if(map.get(ch) == attempts){
+                    ch2 = ch;
+                    while(attempts != 0){
+                        ans.append(ch);
+                        attempts--;
+                    }
+                    break;
+                }
+            }
+            if(ch2 != '/'){
+                map.remove(ch2);
+            }
+        }
+        return new String(ans);
+    }
+}
