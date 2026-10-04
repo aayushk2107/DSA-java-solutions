@@ -269,3 +269,40 @@ on 1 october i did this
         return new String(ans);
     }
 }
+
+on 4th october i revised this there isn't any logical bugs i found and able to find out the approach quickly
+    class Solution {
+    public String longestPalindrome(String s) {
+        int beststart = 0;
+        int bestend = 0;
+        for(int i = 0; i < s.length();i++){
+            int left = i;
+            int right = i;
+            while(left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)){
+                left--;
+                right++;
+            }
+            left++;
+            right--;
+
+            int start = i;
+            int end = i + 1;
+
+            while(start >= 0 && end <= s.length() - 1 && s.charAt(start) == s.charAt(end)){
+                start--;
+                end++;
+            }
+            start++;
+            end--;
+            if(end - start + 1 > bestend - beststart + 1){
+                beststart = start;
+                bestend = end;
+            }
+            if(right - left + 1 > bestend - beststart + 1){
+                beststart = left;
+                bestend = right;
+            }
+        }
+        return s.substring(beststart,bestend + 1);
+    }
+}
