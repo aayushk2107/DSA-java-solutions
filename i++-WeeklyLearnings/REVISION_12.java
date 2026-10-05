@@ -306,3 +306,25 @@ on 4th october i revised this there isn't any logical bugs i found and able to f
         return s.substring(beststart,bestend + 1);
     }
 }
+
+
+on 5th october i did this
+    it's the simplest way btw if i will rememebr i will come back to it and won't use string conversion
+    class Solution {
+    public boolean isPalindrome(int x) {
+        if(x < 0){
+            return false;
+        }
+        String ans = Integer.toString(x);
+        int start = 0;
+        int end = ans.length() - 1;
+        while(start < end){
+            if(ans.charAt(start) != ans.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+}
