@@ -328,3 +328,18 @@ on 5th october i did this
         return true;
     }
 }
+
+a CF cntest i went through on this 7th october DIV -3 
+    import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        int caseno = t;
+        for(int ik = 0;ik < caseno;ik++){
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            int r = sc.nextInt();
+            System.out.println(x - r + " " + y);
+        }
+    }
