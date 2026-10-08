@@ -1,3 +1,6 @@
+I even Learned a New Thing In Java Which is Iterator
+  Iterator gets Used when we are changing collection while Iterating it at the same time
+
 import java.util.*;
 public class Main{
   public static void main(String[]args){
