@@ -1,3 +1,6 @@
+It's a question asked in my Semester exams and got there 95% but that 5% clicked after reaching home so implemenetd it 
+  i shouldv'e got in the exam hall only but because of getting pressure to achieve 50 / 50 it didn't clicked
+
 I even Learned a New Thing In Java Which is Iterator
   Iterator gets Used when we are changing collection while Iterating it at the same time
 
