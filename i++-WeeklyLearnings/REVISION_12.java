@@ -330,7 +330,7 @@ on 5th october i did this
 }
 
 a CF cntest i went through on this 7th october DIV -3 
-    import java.util.*;
+import java.util.*;
 public class Main{
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
@@ -343,3 +343,83 @@ public class Main{
             System.out.println(x - r + " " + y);
         }
     }
+}
+
+on 9th october i revised and it took me a good amount of time to get it 
+    /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if(lists.length == 0 || lists[0] == null && lists.length == 1){
+            return null;
+        }
+        if(lists.length == 1){
+            return lists[0];
+        }
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+        for(int i = 0; i < 1; i++){
+            ListNode curr1 = lists[i];
+            ListNode curr = lists[1];
+            while(curr != null && curr1 != null){
+                if(curr.val < curr1.val){
+                    tail.next = curr;
+                    curr = curr.next;
+                    tail = tail.next;
+                }
+                else{
+                    tail.next = curr1;
+                    curr1 = curr1.next;
+                    tail = tail.next;
+                }
+            }
+            if(curr == null && curr1 != null){
+                tail.next = curr1;
+                break;
+            }
+            else if(curr != null && curr1 == null){
+                tail.next = curr;
+                break;
+            }
+        }
+        for(int i = 2;i < lists.length;i++){
+            ListNode tail2 = dummy.next;
+            ListNode prev = null;
+            ListNode curr = lists[i];
+            while(curr != null && tail2 != null){
+                ListNode tai = null;
+                if(curr.val < tail2.val){
+                    tai = curr.next;
+                    if(prev == null){
+                        dummy.next = curr;
+                        dummy.next.next = tail2;
+                        prev = curr;
+                        curr = tai;
+                    }
+                    else{
+                        prev.next = curr;
+                        prev = prev.next;
+                        prev.next = tail2;
+                        curr = tai;
+                    }
+                }
+                else{
+                    prev = tail2;
+                    tail2 = tail2.next;
+                }
+            }
+            if(curr != null && tail2 == null){
+                prev.next = curr;
+            }
+        }
+        return dummy.next;
+    }
+}
