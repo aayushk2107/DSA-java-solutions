@@ -423,3 +423,38 @@ class Solution {
         return dummy.next;
     }
 }
+
+i did this with my discovered approach it's brute force but it's better than the solution understood by someone else guidance 
+on 11th october
+    class Solution {
+    public int maxArea(int[] height) {
+        int maxarea = 0;
+        for(int i = 0;i < height.length - 1;i++){
+            for(int j = i + 1;j <= height.length - 1;j++){
+                int breadth = 0;
+                if(height[i] > height[j]){
+                    breadth = height[j];
+                }
+                else{
+                    breadth = height[i];
+                }
+                int length = j - i;
+                int area = length * breadth;
+                if(maxarea < area){
+                    maxarea = area;
+                }
+            }
+        }
+        if(height.length == 2){
+            int breadth = 0;
+            if(height[0] < height[1]){
+                breadth = height[0];
+            }
+            else{
+                breadth = height[1];
+            }
+            return 1 * breadth;
+        }
+        return maxarea;
+    }
+}
