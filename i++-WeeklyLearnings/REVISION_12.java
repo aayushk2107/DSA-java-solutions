@@ -458,3 +458,48 @@ on 11th october
         return maxarea;
     }
 }
+Agaain revised my rival question on 12th october
+    class Solution {
+    public String addStrings(String num1, String num2) {
+        int end1 = num1.length() - 1;
+        int end2 = num2.length() - 1;
+        char carry = '0';
+        StringBuilder ans = new StringBuilder();
+        while(end1 >= 0 || end2 >= 0 || carry != '0'){
+            char digit1 = '0';
+            char digit2 = '0';
+            if(end1 >= 0){
+                digit1 = num1.charAt(end1);
+                end1--;
+            }
+            if(end2 >= 0){
+                digit2 = num2.charAt(end2);
+                end2--;
+            }
+            int one = digit1 - '0';
+            int two = digit2 - '0';
+            int three = carry - '0';
+            int sum = one + two + three;
+            if(sum >= 10){
+                carry = '1';
+                ans.append(sum % 10);
+            }
+            else{
+                carry = '0';
+                ans.append((sum));
+            }
+        }
+        String ans1 = new String(ans);
+        char [] arr = ans1.toCharArray();
+        int start = 0;
+        int end = arr.length - 1;
+        while(start < end){
+            char temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        return new String(arr);
+    }
+}
