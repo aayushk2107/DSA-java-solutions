@@ -1,3 +1,6 @@
+ Approacg - 1 
+     solved with simple brute force solution 😭😭😭
+
 class Solution {
     public String maxSumOfSquares(int num, int sum) {
         int count1 = 1;
