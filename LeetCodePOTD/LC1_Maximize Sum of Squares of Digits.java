@@ -1,5 +1,5 @@
- Approacg - 1 
-     solved with simple brute force solution 😭😭😭
+ Approach - 1 
+     solved with simple brute force solution 😭😭😭 and got a gift of TLE in return
 
 class Solution {
     public String maxSumOfSquares(int num, int sum) {
