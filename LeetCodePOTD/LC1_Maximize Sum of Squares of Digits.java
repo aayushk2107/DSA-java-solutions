@@ -59,3 +59,28 @@ class Solution {
         }
     }
 }
+Approach 2 - Greedy 
+ The approach says that ignore all things and focus directly on looking for the maximum number by starting the number counting by 9 
+  i am simply unable to generate the appraoch independently
+ class Solution {
+    public String maxSumOfSquares(int num, int sum) {
+        StringBuilder ans = new StringBuilder();
+        if(9 * num < sum){
+            String ans1 = new String(ans);
+            return ans1;
+        }
+        int number = 0;
+        for(int i = 0; i < num; i++){
+            if(sum < 9){
+                ans.append(sum);
+                sum = 0;
+            }
+            else{
+                ans.append(9);
+                sum -= 9;
+            }
+        }
+        String ans1 = new String(ans);
+        return ans1;
+    }
+}
