@@ -59,3 +59,48 @@ class Solution {
         return ans1;
     }
 }
+
+APPROACH 2 
+    
+NEED REVISON 
+    
+    class Solution {
+    public String multiply(String num1, String num2) {
+        int [] arr = new int[num1.length() + num2.length()];
+        int position1 = 0;
+        int position2 = 0;
+        int carry = 0;
+        for(int i = num2.length() - 1; i >= 0; i--){
+            int digit1 = (num2.charAt(i) - '0');
+            carry = 0;
+            for(int j = num1.length() - 1; j >= 0; j--){
+                position1 = i + j;
+                position2 = i + j + 1;
+                int digit2 = (num1.charAt(j) - '0');
+                int sum = digit1 * digit2;
+                int keep = arr[position2] + sum + carry;
+                int insert = keep % 10;
+                arr[position2] = insert;
+                carry = keep / 10;
+            }
+            arr[i] += carry;
+        }
+        StringBuilder ans = new StringBuilder();
+        int number = 0;
+        for(int i = 0; i <= arr.length - 1; i++){
+            if(arr[i] == 0 && ans.length() == 0){
+                continue;
+            }
+            else{
+                char digit = (char)(arr[i] + '0');
+                ans.append(digit);
+            }
+        }
+        if(num2.length() == 1 || num1.length() == 1){
+            if(num1.charAt(0) == '0' || num2.charAt(0) == '0'){
+                return "0";
+            }
+        }
+        return ans.toString();
+    }
+}
