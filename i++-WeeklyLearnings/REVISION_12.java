@@ -503,3 +503,23 @@ Agaain revised my rival question on 12th october
         return new String(arr);
     }
 }
+
+on 27th october i did this
+    
+    class Solution {
+    public boolean isPalindrome(int x) {
+        String ans = Integer.toString(x);
+        int start = 0;
+        int end = ans.length() - 1;
+        while(start < end){
+            if(ans.charAt(start) != ans.charAt(end)){
+                return false;
+            }
+            else{
+                start++;
+                end--;
+            }
+        }
+        return true;
+    }
+}
