@@ -523,3 +523,37 @@ on 27th october i did this
         return true;
     }
 }
+
+revised this question after a long tine
+    class Solution {
+    public int strStr(String haystack, String needle) {
+        if(needle.length() > haystack.length()){
+            return -1;
+        }
+        int left = 0;
+        int length = 0;
+        for(int i = 0; i < haystack.length() ; i++){
+            if(length != needle.length()){
+                length++;
+            }
+            if(length == needle.length()){
+                int ind = 0;
+                int left1 = left;
+                while(ind < needle.length()){
+                    if(needle.charAt(ind) != haystack.charAt(left1)){
+                        left++;
+                        break;
+                    }
+                    else{
+                        ind++;
+                        left1++;
+                    }
+                }
+                if(ind == needle.length()){
+                    return left;
+                }
+            }
+        }
+        return -1;
+    }
+}
