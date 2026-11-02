@@ -52,3 +52,25 @@ class Solution {
         return arr;
     }
 }
+
+Approach 2 - Used Monotonic Stack Used Decreasing monotonic stack
+
+    class Solution {
+    public int[] nextGreaterElements(int[] nums) {
+        int [] arr = new int[nums.length];
+        Arrays.fill(arr ,  -1);
+        int n = nums.length;
+        Stack<Integer> s1 = new Stack<>();
+        for(int i = 0 ; i < 2 * n ; i++){
+            int j = i % n;
+            while(!s1.isEmpty() && nums[j] > nums[s1.peek()]){
+                arr[s1.peek()] = nums[j];
+                s1.pop();
+            }
+            if(i < n){
+                s1.push(j);
+            }
+        }
+        return arr;
+    }
+}
