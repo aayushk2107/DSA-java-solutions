@@ -23,7 +23,7 @@ class Solution {
 Approach 2 - An intellectual Approach with a kind of pattern which is non intuitive to me
 
     The Approach looks for two boundary (left and right) where the it is constantly searching for elements smaller than it
-    The question is why cause any element which is smaller than the current element can't form a traingle simply
+    The question is why cause any element which is smaller than the current element can't form a rectangle simply
 
     class Solution {
     public int largestRectangleArea(int[] heights) {
