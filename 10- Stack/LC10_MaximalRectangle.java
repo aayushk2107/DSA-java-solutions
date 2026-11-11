@@ -1,6 +1,7 @@
 Approach 1 : My brute Force Approach 
 
-I assumed starting a grid at each 1 and traversed it as long as i found 1's and maintain a consistent count of 1 and count the area Took little help in implementation
+I assumed starting a grid at each 1 and traversed it as long as i found 1's 
+and maintain a consistent count of 1 and count the area Took little help in implementation
 
 class Solution {
     public int maximalRectangle(char[][] matrix) {
