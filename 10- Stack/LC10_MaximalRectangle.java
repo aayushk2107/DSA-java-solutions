@@ -54,3 +54,50 @@ class Solution {
         return maxArea;
     }
 }
+
+Approach 2 - Optimised version With Monotonic Stack
+
+    Again an Intellectual Representation of the problem which reduced the brute forcing 
+    At each Row we simply calculate the Heights if the matrix[i][j] is 1 then we increment it to 1 else to 0 and 
+    Store them in an array and then apply Largest rectangle logic on each stored array number 
+
+    class Solution {
+    public int maximalRectangle(char[][] matrix) {
+        int [] arr = new int[matrix[0].length];
+        int maxArea = 0;
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j < matrix[i].length; j++){
+                if(matrix[i][j] == '0'){
+                    arr[j] = 0;
+                }
+                else if(matrix[i][j] == '1' && arr[j] == 0){
+                    arr[j] = 1;
+                }
+                else if(matrix[i][j] == '1' && arr[j] != 0){
+                    arr[j] += 1;
+                }
+            }
+            Stack<Integer> s1 = new Stack<>();
+            for(int k = 0; k <= arr.length; k++){
+                int number = 0;
+                if(k < arr.length){
+                    number = arr[k];
+                }
+                while(!s1.isEmpty() && arr[s1.peek()] >= number){
+                    int element = arr[s1.peek()];
+                    s1.pop();
+                    int index = -1;
+                    if(!s1.isEmpty()){
+                        index = s1.peek();
+                    }
+                    int currentArea = element * (k - index - 1);
+                    if(currentArea > maxArea){
+                        maxArea = currentArea;
+                    }
+                }
+                s1.push(k);
+            }
+        }
+        return maxArea;
+    }
+}
