@@ -1,3 +1,10 @@
+Approach 1 - My Brute Force Simple Approach
+
+    This Approach says that at each index store all the suffix in an arrayList and then sort it and then at each index after
+    Sorting accumulate all the Elements in an arrayList again and then compare if they are equal then increment answer 
+
+    It passed 908 / 937 TestCases and then hit TLE
+
 class Solution {
     public int countSuffix(int[] nums, int[] target) {
         int index = 0;
